@@ -8,7 +8,7 @@
       "subject": "api::question.question",
       "properties": {
         "fields": [
-          "name"
+          "content"
         ]
       },
       "conditions": [
@@ -37,7 +37,7 @@
       "subject": "api::question.question",
       "properties": {
         "fields": [
-          "name"
+          "content"
         ]
       },
       "conditions": [
@@ -49,7 +49,7 @@
       "subject": "api::question.question",
       "properties": {
         "fields": [
-          "name"
+          "content"
         ]
       },
       "conditions": [

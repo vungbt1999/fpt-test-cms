@@ -1,7 +1,7 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::question.question",
+  "key": "plugin_content_manager_configuration_content_types::api::result.result",
   "value": {
-    "uid": "api::question.question",
+    "uid": "api::result.result",
     "settings": {
       "bulkable": true,
       "filterable": true,
@@ -20,18 +20,47 @@
           "sortable": true
         }
       },
-      "content": {
+      "quiz": {
         "edit": {
-          "label": "Content",
+          "label": "Quiz",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "slug"
+        },
+        "list": {
+          "label": "quiz",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "questions": {
+        "edit": {
+          "label": "Questions",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "content",
+          "label": "questions",
           "searchable": false,
           "sortable": false
+        }
+      },
+      "username": {
+        "edit": {
+          "label": "Username",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "username",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -64,18 +93,29 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "createdAt",
-        "updatedAt"
-      ],
       "edit": [
         [
           {
-            "name": "content",
+            "name": "username",
+            "size": 6
+          },
+          {
+            "name": "quiz",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "questions",
             "size": 12
           }
         ]
+      ],
+      "list": [
+        "id",
+        "quiz",
+        "createdAt",
+        "username"
       ]
     }
   },

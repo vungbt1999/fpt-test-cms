@@ -1,3 +1,8 @@
+import { typeDefs } from "./customize/typeDefs";
+import { createNewResult } from "./customize/mutation";
+import { Strapi } from "@strapi/strapi";
+import { getResultByToken } from "./customize/query";
+
 export default {
   /**
    * An asynchronous register function that runs before
@@ -5,7 +10,32 @@ export default {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/*{ strapi }*/) {},
+  register({ strapi }: { strapi: Strapi }) {
+    const extensionService = strapi.service("plugin::graphql.extension");
+    extensionService.use(() => ({
+      typeDefs: typeDefs,
+      resolvers: {
+        Mutation: {
+          createNewResult: {
+            resolve: createNewResult,
+          },
+        },
+        Query: {
+          getResultByToken: {
+            resolve: getResultByToken,
+          },
+        },
+      },
+      resolversConfig: {
+        "Mutation.createNewResult": {
+          auth: false,
+        },
+        "Query.getResultByToken": {
+          auth: false,
+        },
+      },
+    }));
+  },
 
   /**
    * An asynchronous bootstrap function that runs before
