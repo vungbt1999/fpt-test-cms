@@ -12,8 +12,8 @@
         ]
       },
       "conditions": [
-        "admin::has-same-role-as-creator",
-        "admin::is-creator"
+        "admin::is-creator",
+        "admin::has-same-role-as-creator"
       ]
     },
     {
@@ -53,9 +53,108 @@
         ]
       },
       "conditions": [
-        "admin::has-same-role-as-creator",
-        "admin::is-creator"
+        "admin::is-creator",
+        "admin::has-same-role-as-creator"
       ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::quiz.quiz",
+      "properties": {
+        "fields": [
+          "question",
+          "slug",
+          "name",
+          "questionNumber"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::quiz.quiz",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::quiz.quiz",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::quiz.quiz",
+      "properties": {
+        "fields": [
+          "question",
+          "slug",
+          "name",
+          "questionNumber"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::quiz.quiz",
+      "properties": {
+        "fields": [
+          "question",
+          "slug",
+          "name",
+          "questionNumber"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::result.result",
+      "properties": {
+        "fields": [
+          "quiz",
+          "questions",
+          "username",
+          "score",
+          "isSubmit"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::result.result",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::result.result",
+      "properties": {
+        "fields": [
+          "quiz",
+          "questions",
+          "username",
+          "score",
+          "isSubmit"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::result.result",
+      "properties": {
+        "fields": [
+          "quiz",
+          "questions",
+          "username",
+          "score",
+          "isSubmit"
+        ]
+      },
+      "conditions": []
     },
     {
       "action": "plugin::upload.assets.copy-link",

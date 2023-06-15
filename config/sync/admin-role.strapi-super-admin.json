@@ -103,7 +103,9 @@
         "fields": [
           "quiz",
           "questions",
-          "username"
+          "username",
+          "score",
+          "isSubmit"
         ]
       },
       "conditions": []
@@ -121,7 +123,9 @@
         "fields": [
           "quiz",
           "questions",
-          "username"
+          "username",
+          "score",
+          "isSubmit"
         ]
       },
       "conditions": []
@@ -133,7 +137,9 @@
         "fields": [
           "quiz",
           "questions",
-          "username"
+          "username",
+          "score",
+          "isSubmit"
         ]
       },
       "conditions": []

@@ -63,6 +63,34 @@
           "sortable": true
         }
       },
+      "score": {
+        "edit": {
+          "label": "Score",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "score",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "isSubmit": {
+        "edit": {
+          "label": "Is Submit",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isSubmit",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -109,13 +137,25 @@
             "name": "questions",
             "size": 12
           }
+        ],
+        [
+          {
+            "name": "score",
+            "size": 4
+          },
+          {
+            "name": "isSubmit",
+            "size": 4
+          }
         ]
       ],
       "list": [
         "id",
+        "username",
         "quiz",
-        "createdAt",
-        "username"
+        "score",
+        "isSubmit",
+        "createdAt"
       ]
     }
   },
