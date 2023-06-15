@@ -23,6 +23,14 @@
     "username": {
       "type": "string",
       "required": true
+    },
+    "score": {
+      "type": "integer"
+    },
+    "isSubmit": {
+      "type": "boolean",
+      "default": false,
+      "required": false
     }
   }
 }

@@ -13,7 +13,10 @@ export const getResultByToken = async (
   const resultQuery = strapi.db.query("api::result.result");
   const tokenPayload = verifyToken(argsData.token);
   const resultRes = await resultQuery.findOne({
-    where: { id: tokenPayload.id },
+    where: {
+      id: tokenPayload.id,
+      isSubmit: !true
+    },
     populate: ["quiz"],
   });
   if (!resultRes) throw Error("Không tồn tại bài Quiz.");

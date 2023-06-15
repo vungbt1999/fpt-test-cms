@@ -1,6 +1,7 @@
 export const typeDefs = `
   type Mutation {
     createNewResult(data: CreateNewResultInput!): ResultResolver!
+    submitQuiz(data: SubmitQuizInput!): SubmitQuizResolver!
   }
 
   input CreateNewResultInput {
@@ -8,8 +9,18 @@ export const typeDefs = `
     username: String!
   }
 
+  input SubmitQuizInput {
+    token: String!
+    userAnswers: JSON!
+  }
+
   type ResultResolver {
     token: String!
+  }
+
+  type SubmitQuizResolver {
+    score: Int!
+    totalQuestion: Int!
   }
 
   type Query {

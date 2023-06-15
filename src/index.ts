@@ -2,6 +2,7 @@ import { typeDefs } from "./customize/typeDefs";
 import { createNewResult } from "./customize/mutation";
 import { Strapi } from "@strapi/strapi";
 import { getResultByToken } from "./customize/query";
+import { submitQuiz } from "./customize/mutation/submitQuiz";
 
 export default {
   /**
@@ -19,6 +20,9 @@ export default {
           createNewResult: {
             resolve: createNewResult,
           },
+          submitQuiz: {
+            resolve: submitQuiz,
+          },
         },
         Query: {
           getResultByToken: {
@@ -28,6 +32,9 @@ export default {
       },
       resolversConfig: {
         "Mutation.createNewResult": {
+          auth: false,
+        },
+        "Mutation.submitQuiz": {
           auth: false,
         },
         "Query.getResultByToken": {
