@@ -1,8 +1,7 @@
 import { typeDefs } from "./customize/typeDefs";
-import { createNewResult } from "./customize/mutation";
+import { createNewResult, submitQuiz } from "./customize/mutation";
 import { Strapi } from "@strapi/strapi";
 import { getResultByToken } from "./customize/query";
-import { submitQuiz } from "./customize/mutation/submitQuiz";
 
 export default {
   /**
