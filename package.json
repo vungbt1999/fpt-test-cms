@@ -17,7 +17,6 @@
     "@strapi/plugin-users-permissions": "4.10.2",
     "@strapi/strapi": "4.10.2",
     "jsonwebtoken": "^9.0.0",
-    "lodash": "^4.17.21",
     "pg": "^8.11.0",
     "strapi-plugin-config-sync": "^1.1.2",
     "strapi-plugin-populate-deep": "^2.0.0"

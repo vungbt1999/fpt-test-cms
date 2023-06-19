@@ -25,6 +25,7 @@ export const typeDefs = `
 
   type Query {
     getResultByToken(data: GetResultByTokenInput!): ResultDetailResolver!
+    verifySlug(data: VerifySlugInput!): Boolean!
   }
 
   input GetResultByTokenInput {
@@ -35,5 +36,9 @@ export const typeDefs = `
     username: String!
     quizName: String!
     questions: JSON!
+  }
+
+  input VerifySlugInput {
+    slug: String!
   }
 `;

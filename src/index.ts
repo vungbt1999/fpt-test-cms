@@ -1,7 +1,7 @@
 import { typeDefs } from "./customize/typeDefs";
 import { createNewResult, submitQuiz } from "./customize/mutation";
 import { Strapi } from "@strapi/strapi";
-import { getResultByToken } from "./customize/query";
+import { getResultByToken, verifySlug } from "./customize/query";
 
 export default {
   /**
@@ -27,6 +27,9 @@ export default {
           getResultByToken: {
             resolve: getResultByToken,
           },
+          verifySlug: {
+            resolve: verifySlug
+          }
         },
       },
       resolversConfig: {
@@ -37,6 +40,9 @@ export default {
           auth: false,
         },
         "Query.getResultByToken": {
+          auth: false,
+        },
+        "Query.verifySlug": {
           auth: false,
         },
       },
